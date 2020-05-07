@@ -1,19 +1,19 @@
-$(function() {
+$(function (){ 
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newdevoured = $(this).data("newdevoured");
+      var newEaten = $(this).data("newEaten");
   
-      var newdevouredState = {
-        devoured: newdevoured
+      var newEatenState = {
+        devoured: newEaten
       };
   
       // Send the PUT request.
       $.ajax("/api/icecream/" + id, {
         type: "PUT",
-        data: newdevouredState
+        data: newEatenState
       }).then(
         function() {
-          console.log("changed devoured to", newdevoured);
+          console.log("changed Eaten to", newEaten);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -32,13 +32,14 @@ $(function() {
       // Send the POST request.
       $.ajax("/api/icecream", {
         type: "POST",
-        data: newicecream
+        data: newicecreamChoice
       }).then(
         function() {
-          console.log("created new icecream");
+          console.log("created new icecreamChoice");
           // Reload the page to get the updated list
           location.reload();
         }
       );
     });
+  
   });
