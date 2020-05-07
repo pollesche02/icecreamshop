@@ -21,5 +21,5 @@ var icecream = {
   },
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database 
 module.exports = icecream;

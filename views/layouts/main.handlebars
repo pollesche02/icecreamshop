@@ -1,38 +1,19 @@
-<h1>IceCream Shop</h1>
-
-<h2>Your Favorite IceCream Flavours!</h2>
-
-<ul>
-  {{#each IceCream}}
-    {{#unless devoured}}
-      {{> iceCream/icecream-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Best IceCream!</h2>
-
-<ul>
-  {{#each iceCream}}
-    {{#if devoured}}
-      {{> iceCream/icecream-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add Your Favorite Flavours</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ice">IceCream Name:</label>
-    <input type="text" id="ice" name="name">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<title>Great Ice Cream Flavors!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/assets/js/icecream.js"></script>
+        <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Ice Cream Flavors</h1>
   </div>
-
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Gone !<br>
-    <input type="radio" name="devoured" value="0"> Still Available
-  </div>
-
-  <button type="submit">Lets Add It To The List Of The Greats !</button>
-</form>
+</div>
+	</head>
+	<body>
+		{{{ body }}}
+	</body>
+</html>
