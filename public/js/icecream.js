@@ -1,10 +1,10 @@
 $(function (){ 
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newEaten = $(this).data("newEaten");
+ 
   
       var newEatenState = {
-        devoured: newEaten
+        devoured: 0
       };
   
       // Send the PUT request.
@@ -12,8 +12,8 @@ $(function (){
         type: "PUT",
         data: newEatenState
       }).then(
-        function() {
-          console.log("changed Eaten to", newEaten);
+        function(result) {
+           console.log("changed Eaten to", result);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -25,14 +25,14 @@ $(function (){
       event.preventDefault();
   
       var newicecream = {
-        name: $("#ice").val().trim(),
-        devoured: $("[name=devoured]:checked").val().trim()
+        name: $("#ice").val(),
+        devoured: $("[name=devoured]:checked").val()
       };
   
       // Send the POST request.
       $.ajax("/api/icecream", {
         type: "POST",
-        data: newicecreamChoice
+        data: newicecream
       }).then(
         function() {
           console.log("created new icecreamChoice");

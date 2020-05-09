@@ -13,3 +13,13 @@ h1 {
 body {
     background-color: plum;
 }
+
+.row{
+
+    margin-top:50px;
+}
+.btn{
+
+    background-color: rebeccapurple;
+    color: white;
+}

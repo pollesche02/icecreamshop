@@ -21,10 +21,10 @@ router.get("/", function(req, res) {
 
 router.post("/api/icecream", function(req, res) {
   icecream.create([
-    "icecream_flavor"
+    "icecream_flavor", "devoured"
   ], [
-    req.body.name,
-  ], function(result) {
+    req.body.name, 1
+    ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
@@ -36,7 +36,7 @@ router.put("/api/icecream/:id", function(req, res) {
   console.log("condition", condition);
 
   icecream.update({
-    devoured: true
+    devoured: 0
   }, condition, function(result) {
     if (result.changedRows == 0) {
      
