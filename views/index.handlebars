@@ -11,7 +11,7 @@
 
   <div >
 
-    <h2>Add Your Favorite Flavors</h2>
+    <h3>Add Your Favorite Flavors</h3>
     <br>
     <form class="create-form">
 
@@ -20,20 +20,13 @@
         <input placeholder="icecream Name" type="text" id="ice" name="name">
           <button class="btn" type="submit">Lets Add It To The List Of The Greats !</button>
       </div>
-
-      {{!-- <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Gone !<br>
-    <input type="radio" name="devoured" value="0"> Still Available
-  </div> --}}
-
       
     </form>
   </div>
-
+<br>
   <div class="row">
     <div class="col-6">
-      <h2>Your Favorite IceCream Flavors!</h2>
+      <h3>Your Favorite IceCream Flavors!</h3>
       <ul class="col-6">
         {{#each icecream}}
         {{#unless devoured}}
@@ -48,13 +41,13 @@
     </div>
 
     <div class="col-6">
-      <h2>Best IceCream!</h2>
+      <h3>Best IceCream!</h3>
       <ul>
         {{#each icecream}}
         {{#if devoured}}
         <li class="row">
          <h5 class="col-5"> {{icecream_flavor}}</h5>
-          <button class="change-devoured col-2" data-id={{id}}>Save</button>
+          <button class="change-devoured col-2" data-id={{id}}>Lets Eat</button>
         </li>
         {{/if}}
         {{/each}}
