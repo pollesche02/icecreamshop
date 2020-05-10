@@ -1,17 +1,17 @@
-.jumbrotron {
-    background-color: blue;
-    color: crimson;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+.jumbotron {
+    background-image: url("https://media.giphy.com/media/hgpGAn0ohglHO/giphy.gif");
+    padding-bottom: 100px;
+    margin-bottom: 10px;
 }
 
 h1 {
     font-family: Kristen ITC;
     font-size: 45px;
+    text-align: center;
 }
 
 body {
-    background-color: plum;
+    background-image: url("./images/cbe58ce873ad32c02dfd027cfe68e7c8.png")
 }
 
 .row{
