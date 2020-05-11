@@ -1,6 +1,6 @@
-CREATE DATABASE icecreamshop_db;
+-- CREATE DATABASE icecreamshop_db;
 
-use icecreamshop_db;
+use pxe3idkgxdccaqyr;
 
 CREATE TABLE icecream 
 (
